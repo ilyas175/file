@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Otomatis</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="popup">
+        <div class="kotak">
+            <div class="tutup"></div>
+            <div class="gambarkotak">
+                <img src="https://rajasemut.com/rumahilyas/sedih.png">
+            </div>
+            <div class="isi">
+                <div>
+                    <div>
+                        <div>
+                            <h2>Ups... <span>Maaf</span></h2>
+                            <h3>Server Gangguan</h3>
+                            <p>Kami sedang mengupayakan yang terbaik agar semua kembali normal.</p>
+                            <a href="#">Lanjutkan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup otomatis muncul -->
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(
+                function open(event) {
+                    document.querySelector(".popup").style.display = "block";
+                },
+                1000
+            )
+        });
+
+
+        document.querySelector(".tutup").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
